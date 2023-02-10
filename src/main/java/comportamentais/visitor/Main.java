@@ -3,22 +3,12 @@ package comportamentais.visitor;
 public class Main {
 
     public static void main(String[] args) {
-        Book[] books = new Book[] {
-                new FictionBook("The Great Gatsby", 19.99),
-                new NonFictionBook("The Origin of Species", 29.99),
-                new FictionBook("Pride and Prejudice", 14.99),
-                new NonFictionBook("The Structure of Scientific Revolutions", 39.99)
-        };
+        BookStore bookStore = new BookStore();
 
-        BookDisplayVisitor displayVisitor = new BookDisplayVisitor();
-        BookPriceVisitor priceVisitor = new BookPriceVisitor();
+        bookStore.addBook(new FictionBook("The Great Gatsby", "F. Scott Fitzgerald", 10.99));
+        bookStore.addBook(new NonFictionBook("Introduction to Algorithms", "Thomas H. Cormen", 40.99));
+        bookStore.addBook(new FictionBook("Pride and Prejudice", "Jane Austen", 12.99));
 
-        for (Book book : books) {
-            book.accept(displayVisitor);
-            book.accept(priceVisitor);
-        }
-
-        System.out.println(String.format("Preço total de livros de Ficção: $%.2f", priceVisitor.getFictionBookTotalPrice()));
-        System.out.println(String.format("Preço total de livros de Não-Ficção: $%.2f", priceVisitor.getNonFictionBookTotalPrice()));
+        System.out.println("Preço total: " + bookStore.calculatePrice());;
     }
 }

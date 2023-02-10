@@ -1,15 +1,29 @@
 package comportamentais.visitor;
 
-public class NonFictionBook extends Book {
+public class NonFictionBook implements Book {
 
     private String name;
+    private String author;
     private double price;
 
-    public NonFictionBook(String name, double price) {
-        super(name, price);
+    public NonFictionBook(String name, String author, double price) {
         this.name = name;
+        this.author = author;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     @Override
     public void accept(BookVisitor visitor) {
         visitor.visit(this);

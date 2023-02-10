@@ -1,14 +1,27 @@
 package comportamentais.visitor;
 
-public class FictionBook extends Book {
+public class FictionBook implements Book {
 
     private String name;
+    private String author;
     private double price;
 
-    public FictionBook(String name, double price) {
-        super(name, price);
+    public FictionBook(String name, String author, double price) {
         this.name = name;
+        this.author = author;
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     @Override
