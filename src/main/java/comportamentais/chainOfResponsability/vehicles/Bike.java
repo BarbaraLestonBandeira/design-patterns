@@ -1,4 +1,4 @@
-package comportamentais.chainOfResponsability;
+package comportamentais.chainOfResponsability.vehicles;
 
 public class Bike extends Vehicle {
 
