@@ -6,7 +6,7 @@ public class FiftyHandler implements ATMRequestHandler {
 
     @Override
     public void handleRequest(ATMRequest request) {
-        if(request.getAmount() <= 50) {
+        if(request.getAmount() >= 50) {
             int numNotes = request.getAmount() / 50;
             System.out.println(numNotes + " notas de 50€ levantadas.");
             int remainder = request.getAmount() % 50;
