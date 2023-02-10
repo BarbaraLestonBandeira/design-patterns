@@ -6,7 +6,7 @@ public class Main {
 
         Vehicle car1 = factory.getVehicle("car1");
         Vehicle car2 = factory.getVehicle("car2");
-        Vehicle car3 = factory.getVehicle("car3");
+        Vehicle car3 = factory.getVehicle("car3 ");
 
         Vehicle bike1 = factory.getVehicle("bike1");
 

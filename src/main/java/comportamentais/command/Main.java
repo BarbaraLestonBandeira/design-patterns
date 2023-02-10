@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Receiver receiver = new Receiver();
+
         Command carCommand = new Car(receiver);
         Command bikeCommand = new Bike(receiver);
 

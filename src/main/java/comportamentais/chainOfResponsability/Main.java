@@ -9,6 +9,7 @@ public class Main {
         Bike bike = new Bike();
         Car car = new Car();
         Bus bus = new Bus();
+        Helicopter helicopter = new Helicopter();
 
         car.setNextVehicle(bus);
 
@@ -18,6 +19,7 @@ public class Main {
         car.setNextVehicle(bike);
 
         car.handleRequest("Bike");
+        car.handleRequest("Helicopter");
 
     }
 }
